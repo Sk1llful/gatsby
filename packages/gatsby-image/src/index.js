@@ -78,7 +78,10 @@ const getImageSrcKey = ({ fluid, fixed }) => {
 
   return data.src
 }
-
+if ("connection" in navigator) {
+    if (navigator.connection.saveData === true) {
+        // Implement data saving operations here.
+  
 /**
  * Returns the current src - Preferably with art-direction support.
  * @param currentData  {{media?: string}[]}   The fluid or fixed image array.
